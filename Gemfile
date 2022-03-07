@@ -78,3 +78,9 @@ gem "redis-rails", "~> 5.0"
 gem "tailwindcss-rails", "~> 2.0"
 
 gem "rack-cors", "~> 1.1"
+
+gem "dotenv-rails", "~> 2.7", :groups => [:development, :test]
+
+gem "omniauth-github", "~> 2.0"
+
+gem "omniauth-rails_csrf_protection", "~> 1.0"
