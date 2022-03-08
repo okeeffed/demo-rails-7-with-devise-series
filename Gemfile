@@ -84,3 +84,5 @@ gem "dotenv-rails", "~> 2.7", :groups => [:development, :test]
 gem "omniauth-github", "~> 2.0"
 
 gem "omniauth-rails_csrf_protection", "~> 1.0"
+
+gem "recaptcha", "~> 5.9"
