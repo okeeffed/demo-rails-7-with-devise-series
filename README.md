@@ -24,5 +24,6 @@ Depending on which blog post you are up to, the starting point will be set as th
 7. `6-recaptcha`
 8. `7-testing-authentication`
 9. `8-authorization`
+10. `9-devise-failure-app`
 
 Each branch will have the final code for that section. `main` will also have the completed code.
