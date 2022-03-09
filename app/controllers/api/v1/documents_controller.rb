@@ -1,4 +1,4 @@
-class DocumentsController < ApplicationController
+class Api::V1::DocumentsController < ApplicationController
   include Pundit::Authorization
 
   def index

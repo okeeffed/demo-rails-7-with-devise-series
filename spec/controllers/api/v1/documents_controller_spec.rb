@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe DocumentsController, type: :controller do
+RSpec.describe Api::V1::DocumentsController, type: :controller do
   describe 'GET #index' do
     let(:subject) { create(:document) }
 
@@ -16,10 +16,11 @@ RSpec.describe DocumentsController, type: :controller do
 
     context 'unsuccessful responses' do
       context 'not authenticated' do
-        it 'redirects user when they are not logged in' do
+        it 'responds with not authorized when they are not logged in' do
+          request.headers['REQUEST_PATH'] = api_v1_documents_path
           get :create, params: { body: subject.body }
 
-          expect(response.status).to eq(302)
+          expect(response.status).to eq(401)
         end
       end
 
@@ -75,10 +76,11 @@ RSpec.describe DocumentsController, type: :controller do
     context 'unsuccessful responses' do
       let(:subject) { create(:document) }
 
-      it 'redirects user when they are not logged in' do
+      it 'responds with not authorized when they are not logged in' do
+        request.headers['REQUEST_PATH'] = api_v1_documents_show_path
         get :create, params: { id: subject.id }
 
-        expect(response.status).to eq(302)
+        expect(response.status).to eq(401)
       end
 
       context 'basic user is not related to document' do
