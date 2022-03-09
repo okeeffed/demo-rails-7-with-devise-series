@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'documents/index'
-  get 'documents/create'
-  get 'documents/update'
-  get 'documents/destroy'
   get 'session/index'
   devise_for :users,
              controllers: { omniauth_callbacks: 'users/omniauth_callbacks', sessions: 'users/sessions',
@@ -11,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :session, only: [:index]
   resources :home, only: %i[index create]
+  resources :documents, only: %i[index create update destroy show]  
 
   # Defines the root path route ("/")
   root 'home#index'

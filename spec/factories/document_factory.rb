@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :document do
-    body { "MyString" }
+    body { 'MyString' }
   end
 end

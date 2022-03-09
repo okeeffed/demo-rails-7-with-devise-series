@@ -22,5 +22,7 @@ Depending on which blog post you are up to, the starting point will be set as th
 5. `4-seperate-frontends`
 6. `5-github-oauth`
 7. `6-recaptcha`
+8. `7-testing-authentication`
+9. `8-authorization`
 
 Each branch will have the final code for that section. `main` will also have the completed code.

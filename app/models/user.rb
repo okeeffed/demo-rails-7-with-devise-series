@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum type: {
+  enum role: {
     basic: 0,
     admin: 1
   }
