@@ -86,3 +86,9 @@ gem "omniauth-github", "~> 2.0"
 gem "omniauth-rails_csrf_protection", "~> 1.0"
 
 gem "recaptcha", "~> 5.9"
+
+gem "rspec-rails", "~> 5.1", :groups => [:development, :test]
+
+gem "factory_bot_rails", "~> 6.2", :groups => [:development, :test]
+
+gem "pry", "~> 0.14.1", :groups => [:development, :test]
